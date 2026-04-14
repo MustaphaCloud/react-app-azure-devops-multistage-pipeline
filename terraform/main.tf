@@ -17,21 +17,21 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "mini-finance-vnet"
+  name                = "react-app-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                 = "mini-finance-subnet"
+  name                 = "react-app-subnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_public_ip" "public_ip" {
-  name                = "mini-finance-pip"
+  name                = "react-app-pip"
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
@@ -39,7 +39,7 @@ resource "azurerm_public_ip" "public_ip" {
 }
 
 resource "azurerm_network_security_group" "nsg" {
-  name                = "mini-finance-nsg"
+  name                = "react-app-nsg"
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -69,7 +69,7 @@ resource "azurerm_network_security_group" "nsg" {
 }
 
 resource "azurerm_network_interface" "nic" {
-  name                = "mini-finance-nic"
+  name                = "react-app-nic"
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
 

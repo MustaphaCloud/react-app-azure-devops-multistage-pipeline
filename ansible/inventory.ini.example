@@ -1,7 +1,0 @@
-[web]
-YOUR_VM_PUBLIC_IP
-
-[web:vars]
-ansible_user=YOUR_VM_USERNAME
-ansible_password=YOUR_VM_PASSWORD
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'

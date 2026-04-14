@@ -1,5 +1,5 @@
 ---
-- name: Configure Nginx on Mini Finance VM
+- name: Configure Nginx on React App VM
   hosts: web
   become: true
 

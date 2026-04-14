@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  default = "mini-finance-rg"
+  default = "react-app-rg"
 }
 
 variable "location" {
@@ -7,7 +7,7 @@ variable "location" {
 }
 
 variable "vm_name" {
-  default = "mini-finance-vm"
+  default = "react-app-vm"
 }
 
 variable "admin_username" {
